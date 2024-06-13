@@ -32,13 +32,6 @@ Features
     Sound effects for piece selection, movement, and victory.
     Victory screen upon achieving game objectives.
 
-Screenshots
-
-
-Gameplay screenshot showing initial setup.
-
-
-Victory screen upon successful capture or escape.
 Getting Started
 
 To run the game locally:
@@ -65,7 +58,7 @@ Contributing
 Contributions are welcome! Please fork the repository and create a pull request for any new features, improvements, or bug fixes.
 License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the GPL3.0 License - see the LICENSE file for details.
 Acknowledgments
 
     Inspired by the ancient game of Hnefatafl.
