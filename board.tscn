@@ -1,0 +1,25 @@
+[gd_scene load_steps=6 format=3 uid="uid://cibqecvvk0lil"]
+
+[ext_resource type="Script" path="res://board.gd" id="1_md0l1"]
+[ext_resource type="AudioStream" uid="uid://s4bflo8b8q4b" path="res://sounds/026311_quotmedievalquot-guitar-loop-70460.mp3" id="2_8jh7u"]
+[ext_resource type="AudioStream" uid="uid://vn4wo2nc1fui" path="res://sounds/075747_inception-horn-victory-82997.mp3" id="3_nlnio"]
+[ext_resource type="AudioStream" uid="uid://bweivq8ub48vg" path="res://sounds/pick-92276.mp3" id="4_7kbxn"]
+[ext_resource type="AudioStream" uid="uid://re6qa4n7k8ai" path="res://sounds/plastic-wow-4-83016.mp3" id="5_k2vri"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_md0l1")
+
+[node name="background" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_8jh7u")
+pitch_scale = 0.8
+autoplay = true
+mix_target = 1
+
+[node name="victory" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_nlnio")
+
+[node name="pick" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_7kbxn")
+
+[node name="drop" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_k2vri")
