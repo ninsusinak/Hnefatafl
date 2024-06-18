@@ -31,6 +31,9 @@ Features
     Interactive piece movement based on Hnefatafl rules.
     Sound effects for piece selection, movement, and victory.
     Victory screen upon achieving game objectives.
+    
+Screenshots
+![image](https://github.com/ninsusinak/Hnefatafl/assets/57236213/aa579f49-051f-48d9-b7b8-966693bd434e)
 
 Getting Started
 
