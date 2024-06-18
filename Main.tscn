@@ -1,7 +1,20 @@
-[gd_scene load_steps=2 format=3 uid="uid://cpkoipsnsqjh3"]
+[gd_scene load_steps=5 format=3 uid="uid://dfp2uelcenknd"]
 
-[ext_resource type="PackedScene" uid="uid://cibqecvvk0lil" path="res://board.tscn" id="1_7ypol"]
+[ext_resource type="Script" path="res://core/Board.gd" id="1"]
+[ext_resource type="Script" path="res://core/VictoryScreen.gd" id="2"]
+[ext_resource type="Script" path="res://ai/AI.gd" id="3"]
+[ext_resource type="Script" path="res://main_script.gd" id="4"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Main" type="Node2D"]
+script = ExtResource("4")
 
-[node name="Node2D" parent="." instance=ExtResource("1_7ypol")]
+[node name="Board" type="Node2D" parent="." node_paths=PackedStringArray("ai")]
+script = ExtResource("1")
+ai = NodePath(".")
+
+[node name="VictoryScreen" type="Node" parent="."]
+script = ExtResource("2")
+
+[node name="AI" type="Node" parent="." node_paths=PackedStringArray("board")]
+script = ExtResource("3")
+board = NodePath("../Board")
