@@ -33,6 +33,8 @@ Features
     Victory screen upon achieving game objectives.
     
 Screenshots
+![image](https://github.com/ninsusinak/Hnefatafl/assets/57236213/c68fc001-e60a-4a05-9909-ba679d7829f5)
+
 ![image](https://github.com/ninsusinak/Hnefatafl/assets/57236213/aa579f49-051f-48d9-b7b8-966693bd434e)
 
 Getting Started
