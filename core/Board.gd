@@ -16,10 +16,31 @@ var selected_piece = null
 var original_piece_color = Color(1, 1, 1, 1)
 var current_player = Constants.PieceType.DEFENDER
 
+func get_node2d_size():
+	var children = get_children()
+	if children.size() == 0:
+		return Vector2()
+
+	var min_x = INF
+	var min_y = INF
+	var max_x = -INF
+	var max_y = -INF
+
+	for child in children:
+		if child is Node2D:
+			var child_position = child.position
+			min_x = min(min_x, child_position.x)
+			min_y = min(min_y, child_position.y)
+			max_x = max(max_x, child_position.x)
+			max_y = max(max_y, child_position.y)
+
+	return Vector2(max_x - min_x, max_y - min_y)
+
 func _ready():
 	create_grid()
 	setup_board()
-	set_window_size()
+		# Assuming you want the grid to occupy 80% of the screen size
+	#set_window_size()
 	add_child(sound_pick_player)
 	add_child(sound_drop_player)
 	add_child(background_music_player)
@@ -94,7 +115,8 @@ func create_grid():
 		for col in range(Constants.GRID_SIZE):
 			var cell_sprite = Sprite2D.new()
 			cell_sprite.texture = texture
-			cell_sprite.position = Vector2(col * texture_size.x + Constants.OFFSET, row * texture_size.y + Constants.OFFSET)
+			cell_sprite.apply_scale(Vector2(1.2,1.2))
+			cell_sprite.position = Vector2(col * texture_size.x  + Constants.OFFSET, row * texture_size.y + Constants.OFFSET)
 			add_child(cell_sprite)
 
 	var corner_positions = Constants.CORNERS
@@ -107,7 +129,7 @@ func create_grid():
 
 func _input(event):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-		var cell_position = get_global_mouse_position()
+		var cell_position = (get_global_mouse_position() - self.position )
 		var grid_position = Constants.pixel_to_cell(cell_position)
 		if selected_piece == null:
 			selected_piece = get_piece_at(grid_position)
@@ -215,9 +237,3 @@ func check_king_surrounded(grid_position):
 func check_king_in_corner(grid_position, piece):
 	if piece.texture == Constants.match_piece_type(Constants.PieceType.KING) and grid_position in Constants.CORNERS:
 		victory_screen.show_defvictory_screen()
-
-func set_window_size():
-	var texture = preload("res://assets/square.png")
-	var texture_size = texture.get_size()
-	var window_size = Vector2(texture_size.x * Constants.GRID_SIZE, texture_size.y * Constants.GRID_SIZE)
-	get_viewport().set_size(window_size)
