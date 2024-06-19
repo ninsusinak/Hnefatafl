@@ -17,6 +17,11 @@ const ATTACKER_TEXTURE_PATH = preload("res://assets/attacker.png")
 const DEFENDER_TEXTURE_PATH = preload("res://assets/defender.png")
 const THRONE_TEXTURE_PATH = preload("res://assets/throne.png")
 
+const DIRECTIONS = [
+	Vector2(1, 0), Vector2(-1, 0), Vector2(0, 1), Vector2(0, -1),
+	Vector2(1, 1), Vector2(-1, -1), Vector2(-1, 1), Vector2(1, -1)
+]
+
 const CORNERS = [
 	Vector2(0, 0),
 	Vector2(0, 8),

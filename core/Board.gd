@@ -4,9 +4,9 @@ extends Node2D
 const Constants = preload("res://core/Constants.gd")
 const Piece = preload("res://core/Piece.gd")
 const Victory = preload("res://core/VictoryScreen.gd")
+const game_ai = preload("res://ai/AI.gd")
 
-@export var ai : Node
-
+@onready var ai = game_ai.new()
 @onready var victory_screen = Victory.new()
 @onready var sound_pick_player = AudioStreamPlayer.new()
 @onready var sound_drop_player = AudioStreamPlayer.new()

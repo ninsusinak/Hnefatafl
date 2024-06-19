@@ -35,12 +35,11 @@ offset_bottom = 991.0
 texture = ExtResource("6_40nx7")
 expand_mode = 1
 
-[node name="Board" type="Node2D" parent="Control" node_paths=PackedStringArray("ai")]
+[node name="Board" type="Node2D" parent="Control"]
 top_level = true
 position = Vector2(442, 29)
 scale = Vector2(1.8, 1.8)
 script = ExtResource("1")
-ai = NodePath(".")
 
 [node name="AI" type="Node" parent="Control" node_paths=PackedStringArray("board")]
 script = ExtResource("3")
