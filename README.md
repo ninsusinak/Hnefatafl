@@ -1,6 +1,6 @@
-Hnefatafl Game
+# Hnefatafl Game
 
-Overview
+### Overview
 
 This project is a simple implementation of the Hnefatafl board game using the Godot game engine. The game follows the rules of Hnefatafl played on a 9x9 board.
 Rules
@@ -20,24 +20,24 @@ Hnefatafl is an ancient Norse strategy board game. Here are the rules specific t
     Capture:
         Attackers capture the King by surrounding it on two opposite sides (vertically or horizontally).
 
-Controls
+### Controls
 
     Mouse Click: Select and move pieces.
     Turns: Players take turns moving pieces according to the rules.
 
-Features
+### Features
 
     Visual representation of the game board.
     Interactive piece movement based on Hnefatafl rules.
     Sound effects for piece selection, movement, and victory.
     Victory screen upon achieving game objectives.
     
-Screenshots
+### Screenshots
 ![image](https://github.com/ninsusinak/Hnefatafl/assets/57236213/c68fc001-e60a-4a05-9909-ba679d7829f5)
 
 ![image](https://github.com/ninsusinak/Hnefatafl/assets/57236213/aa579f49-051f-48d9-b7b8-966693bd434e)
 
-Getting Started
+### Getting Started
 
 To run the game locally:
 
@@ -52,13 +52,13 @@ To run the game locally:
 
     Run the project from Godot.
 
-Future Improvements
+### Future Improvements
 
     Implement an AI opponent for single-player mode.
     Add multiplayer functionality.
     Enhance graphics and animations.
 
-Contributing
+### Contributing
 
 Contributions are welcome! Please fork the repository and create a pull request for any new features, improvements, or bug fixes.
 License
