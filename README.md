@@ -45,7 +45,7 @@ To run the game locally:
 
     bash
 
-    git clone https://github.com/your-username/hnefatafl-game.git
+    git clone git@github.com:ninsusinak/Hnefatafl.git
     cd hnefatafl-game
 
     Open the project in Godot Engine.
